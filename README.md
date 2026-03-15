@@ -23,9 +23,9 @@ Heart rate and skin conductance data are processed to extract autonomic nervous 
 * **PPG:** Bandpass filtering ($0.5–3.0$ Hz) and peak enhancement using `HeartPy` to calculate **BPM, SDNN, RMSSD, and pNN50**.
 
 #### 3. Deep Learning Inference
-The server implements an **LSTM Classifier** with an **Attention Layer**:
+The server implements an **LSTM Classifier** with a **Self-Attention Layer**:
 * **Windowing:** Data is segmented into 4 sequential temporal windows (time steps).
-* **Attention Mechanism:** Focuses on specific windows that are most predictive of cognitive load.
+* **Self-Attention Mechanism:** Focuses on specific windows that are most predictive of cognitive load.
 * **Prediction:** Returns a difficulty class and associated confidence probabilities.
 
 ---
